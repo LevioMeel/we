@@ -1,0 +1,33 @@
+.title {
+  font-size: 14px;
+  color: #434344;
+  margin-bottom: 8px;
+}
+.input {
+  padding: 8px 20px 8px 10px;
+  border-radius: 4px;
+  background: #e9effd;
+  border: 1px solid #e4e7ec;
+  width: 100%;
+}
+.input:focus {
+  background: #d9dfec;
+}
+
+/* InputWithEye.module.css */
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.eyeIcon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+}
