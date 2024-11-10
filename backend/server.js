@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 const corsOptions = {
-  origin: "http://localhost:5173", // Allow only requests from this origin
+  origin: "http://localhost:3000", // Allow only requests from this origin
   methods: "GET,POST,PUT,DELETE", // Allow only these methods
   allowedHeaders: ["Content-Type", "Authorization"], // Allow only these headers
   credentials: true,

@@ -8,6 +8,7 @@ export default function BlueButton({ ...props }) {
         type="text"
         placeholder={props.placeholder}
         className={styles.input}
+        name={props.name}
       />
     </div>
   );

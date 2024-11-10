@@ -16,6 +16,7 @@ export default function BlueButton({ ...props }) {
           type={showPassword ? "text" : "password"}
           placeholder={"Введите пароль"}
           className={styles.input}
+          name={props.name}
         />
         <button
           className={styles.eyeIcon}

@@ -4,6 +4,8 @@ import Input from "@/components/forms/Input";
 import InputPass from "@/components/forms/InputPass";
 import Link from "next/link";
 
+import { signup } from "@/app/actions/auth";
+
 import styles from "./auth.module.css";
 
 export default function Page() {
@@ -33,24 +35,26 @@ export default function Page() {
         </g>
       </svg>
       <div className={styles.authBody}>
-        <div className={styles.title}>Вход в аккаунт</div>
-        <Input
-          style={{ marginBottom: "10px" }}
-          placeholder="Введите email"
-        ></Input>
-        <InputPass style={{ marginBottom: "20px" }}></InputPass>
-        <BlueButton onClick={() => console.log("Clicked!")}>Войти</BlueButton>
-        <div className={styles.links}>
-          <span>Забыли пароль?</span>
-          <Link href="/auth/recoverPassword">
-            <span className={styles.recoverPass}>Восстановить</span>
-          </Link>
-        </div>
+        <div className={styles.title}>Регистрация</div>
+        <form action={signup}>
+          <Input
+            style={{ marginBottom: "10px" }}
+            placeholder="Введите email"
+            name="email"
+          ></Input>
+          <InputPass
+            style={{ marginBottom: "20px" }}
+            name="password"
+          ></InputPass>
+          <BlueButton onClick={() => console.log("Clicked!")}>
+            Зарегистрироваться
+          </BlueButton>
+        </form>
       </div>
       <div className={styles.links}>
-        <span>нет аккаунта?</span>
-        <Link href="/auth/register">
-          <span className={styles.recoverPass}>Зарегистрируйся</span>
+        <span>Есть аккаунт?</span>
+        <Link href="/login">
+          <span className={styles.recoverPass}>Войти</span>
         </Link>
       </div>
       <div className={styles.copyright}>
